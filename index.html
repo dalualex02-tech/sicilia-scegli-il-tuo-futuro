@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b46">
+<meta name="description" content="Sicilia, scegli il tuo futuro: iniziativa civica per discutere democraticamente il futuro istituzionale della Sicilia.">
+<title>Sicilia, scegli il tuo futuro</title>
+<style>
+:root{--navy:#102b46;--blue:#174b70;--gold:#f2c94c;--red:#c9433d;--cream:#fffaf0;--ink:#172536;--muted:#657487;--line:#dce4eb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);line-height:1.6;background:#fff}
+a{color:inherit} .wrap{width:min(1120px,92%);margin:auto}
+header{background:var(--navy);color:white;position:relative;overflow:hidden}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 0}
+.brand{font-weight:850;letter-spacing:-.03em;line-height:1.1}.brand small{display:block;font-weight:500;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#c8d9e6;margin-top:6px}
+.navlinks{display:flex;gap:20px;align-items:center;font-size:.92rem}.navlinks a{text-decoration:none;color:#e9f0f6}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:0;border-radius:999px;padding:13px 22px;font-weight:800;cursor:pointer;transition:transform .15s,opacity .15s}.btn:hover{transform:translateY(-1px)}.btn-gold{background:var(--gold);color:#172536}.btn-light{background:#fff;color:var(--navy)}.btn-outline{border:1px solid #c9d7e2;color:white;background:transparent}
+.hero{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center;padding:62px 0 78px;position:relative}
+.kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:850}
+h1{font-size:clamp(2.7rem,6vw,5.5rem);line-height:.98;letter-spacing:-.06em;margin:17px 0 22px;max-width:700px}
+.hero p{font-size:1.12rem;color:#dbe6ef;max-width:620px}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-note{font-size:.86rem!important;color:#b9ccdb!important}
+.island-card{background:linear-gradient(145deg,#f7d86c,#d9a83d);padding:18px;border-radius:28px;box-shadow:0 24px 70px #06192b70;transform:rotate(1deg)}
+.island-art{background:#fdf8e9;border-radius:20px;min-height:300px;display:grid;place-items:center;overflow:hidden;position:relative}
+.island-art svg{width:92%;max-height:330px}.island-label{font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);text-align:center;padding:13px 6px 3px}
+.stripe{height:6px;background:linear-gradient(90deg,#23804a 0 33.3%,#fff 33.3% 66.6%,#c9433d 66.6%);border-radius:8px}
+section{padding:76px 0}.section-kicker{font-size:.76rem;letter-spacing:.15em;text-transform:uppercase;font-weight:850;color:#a67a08}h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.06;letter-spacing:-.045em;margin:10px 0 18px;color:var(--navy)}.lead{font-size:1.08rem;max-width:760px;color:#526276}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.card{padding:25px;border:1px solid var(--line);border-radius:20px;background:white}.card .num{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#fff1bd;color:#654c00;font-weight:900}.card h3{margin:17px 0 7px;color:var(--navy)}.card p{margin:0;color:#5d6c7d}
+.petition{background:var(--cream)}.petition-box{margin-top:28px;border-radius:24px;padding:clamp(24px,5vw,48px);background:var(--navy);color:white;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.petition-box h3{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.1;margin:0 0 12px}.petition-box p{color:#d6e3ed;max-width:700px}.goal{font-size:.9rem;color:#d6e3ed;margin-top:20px}.goalbar{height:10px;background:#476076;border-radius:99px;overflow:hidden;margin-top:8px}.goalbar span{display:block;width:0;height:100%;background:var(--gold)}.goal-note{font-size:.8rem;color:#b9ccdb;margin-top:7px}
+.steps{counter-reset:step;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}.step{border-top:3px solid var(--gold);padding:20px 4px}.step:before{counter-increment:step;content:"0" counter(step);font-size:1.8rem;font-weight:900;color:#b78c13}.step h3{color:var(--navy);margin:8px 0}.step p{color:#5d6c7d;margin:0}
+.notice{background:#f4f7fa;border:1px solid var(--line);padding:22px;border-radius:16px;color:#435368}.notice strong{color:var(--navy)}
+footer{background:#091d30;color:#dbe6ef;padding:38px 0}footer p{font-size:.86rem;color:#b9ccdb;max-width:850px}.footlinks{display:flex;gap:18px;flex-wrap:wrap;font-size:.9rem}.footlinks a{color:#fff}
+.small{font-size:.83rem;color:var(--muted)}.anchor{scroll-margin-top:20px}
+@media(max-width:780px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:42px 0 56px;gap:28px}.island-art{min-height:230px}.cards,.steps{grid-template-columns:1fr}.petition-box{grid-template-columns:1fr}.petition-box .btn{justify-self:start}section{padding:58px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <nav aria-label="Navigazione principale">
+   <div class="brand">SICILIA, SCEGLI IL TUO FUTURO<small>Una proposta civica</small></div>
+   <div class="navlinks"><a href="#proposta">La proposta</a><a href="#perche">Perché parlarne</a><a href="#trasparenza">Trasparenza</a></div>
+   <a class="btn btn-outline" href="#petizione">Partecipa</a>
+  </nav>
+  <div class="hero">
+   <div>
+    <div class="kicker">La Sicilia al centro del dibattito</div>
+    <h1>Il futuro della Sicilia.<br><span style="color:var(--gold)">Scegliamolo insieme.</span></h1>
+    <p>Apriamo un confronto pubblico, informato e democratico sull'ipotesi di indipendenza della Sicilia: opportunità, costi, rischi e percorsi giuridici.</p>
+    <div class="hero-actions"><a class="btn btn-gold" href="#petizione">Sostieni la petizione ↗</a><a class="btn btn-outline" href="#proposta">Leggi la proposta</a></div>
+    <p class="hero-note">Obiettivo comunicativo iniziale: 10.000 adesioni alla petizione online.</p>
+   </div>
+   <div class="island-card" aria-label="Illustrazione stilizzata della Sicilia">
+    <div class="island-art">
+     <svg viewBox="0 0 420 340" role="img" aria-label="Illustrazione decorativa della Sicilia nel Mediterraneo">
+      <defs><linearGradient id="sea" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7edf1"/><stop offset="1" stop-color="#a5d3dc"/></linearGradient><linearGradient id="land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6d05c"/><stop offset="1" stop-color="#e4ad34"/></linearGradient></defs>
+      <rect width="420" height="340" rx="18" fill="url(#sea)"/>
+      <g fill="none" stroke="#fff" stroke-width="2" opacity=".7"><path d="M-10 60 Q80 40 150 65 T440 48"/><path d="M-10 95 Q90 76 180 100 T440 82"/><path d="M-10 260 Q80 240 160 264 T440 247"/><path d="M-10 292 Q90 274 180 298 T440 282"/></g>
+      <path d="M65 165 L100 146 L132 151 L156 132 L184 137 L202 119 L232 130 L258 118 L280 132 L309 126 L334 147 L365 152 L347 177 L321 183 L302 207 L274 213 L260 239 L236 229 L219 246 L193 229 L175 239 L150 219 L128 217 L111 194 L83 190 Z" fill="#fff" opacity=".7" transform="translate(0 7)"/>
+      <path d="M58 159 L95 141 L128 147 L153 127 L181 132 L201 113 L231 125 L256 112 L279 127 L308 121 L335 142 L368 147 L350 173 L323 178 L305 201 L277 207 L263 232 L239 223 L221 239 L195 223 L176 232 L151 213 L130 211 L113 188 L82 184 Z" fill="url(#land)" stroke="#a8791e" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M255 111 L276 79 L290 54 L302 76 L311 105 L297 128 Z" fill="#f5f0e3" stroke="#b7a88b" stroke-width="2"/>
+      <path d="M274 81 L290 54 L302 76 L311 105 L297 128 Z" fill="#fff" opacity=".7"/>
+      <circle cx="153" cy="174" r="4" fill="#a53c30"/><circle cx="286" cy="158" r="4" fill="#a53c30"/><circle cx="220" cy="202" r="4" fill="#a53c30"/>
+      <g font-family="system-ui,sans-serif" font-size="12" font-weight="800" fill="#173650"><text x="122" y="194">PALERMO</text><text x="293" y="151">MESSINA</text><text x="225" y="220">CATANIA</text></g>
+      <text x="210" y="315" text-anchor="middle" font-size="11" letter-spacing="4" font-weight="800" fill="#315c70">MEDITERRANEO</text>
+     </svg>
+    </div>
+    <div class="island-label">Identità • Partecipazione • Futuro</div><div class="stripe"></div>
+   </div>
+  </div>
+ </div>
+</header>
+<main>
+<section id="proposta" class="anchor">
+ <div class="wrap">
+  <div class="section-kicker">La proposta</div>
+  <h2>Una discussione seria, aperta a tutti.</h2>
+  <p class="lead">Questa iniziativa non dichiara già deciso il futuro della Sicilia. Chiede che l'ipotesi di indipendenza venga discussa pubblicamente, con dati verificabili, pluralità di opinioni e rispetto della legge.</p>
+  <div class="cards">
+   <article class="card"><div class="num">01</div><h3>Informazione trasparente</h3><p>Valutare entrate, spese, servizi pubblici, lavoro, commercio e rapporti con l'Italia e l'Unione europea.</p></article>
+   <article class="card"><div class="num">02</div><h3>Partecipazione democratica</h3><p>Dare spazio a cittadini, associazioni, esperti e a chi sostiene posizioni diverse, senza intimidazioni.</p></article>
+   <article class="card"><div class="num">03</div><h3>Chiarezza giuridica</h3><p>Chiedere una valutazione qualificata dei limiti costituzionali e degli strumenti istituzionali applicabili.</p></article>
+  </div>
+ </div>
+</section>
+<section id="perche" class="anchor" style="background:#f7f9fb">
+ <div class="wrap">
+  <div class="section-kicker">I temi da approfondire</div><h2>Il futuro non si decide con gli slogan.</h2>
+  <p class="lead">Perché la proposta sia credibile, il confronto deve esaminare sia le ragioni di chi sostiene l'indipendenza sia le obiezioni e i possibili effetti concreti.</p>
+  <div class="steps">
+   <article class="step"><h3>Economia e lavoro</h3><p>Quali sarebbero le conseguenze per occupazione, imprese, pensioni, servizi e finanze pubbliche?</p></article>
+   <article class="step"><h3>Diritti e servizi</h3><p>Come sarebbero tutelati sanità, scuola, mobilità, cittadinanza e diritti acquisiti?</p></article>
+   <article class="step"><h3>Relazioni e transizione</h3><p>Quali rapporti con l'Italia, l'Unione europea e gli altri Paesi sarebbero possibili secondo il diritto applicabile?</p></article>
+  </div>
+ </div>
+</section>
+<section id="petizione" class="petition anchor">
+ <div class="wrap">
+  <div class="section-kicker">Partecipa</div><h2>Facciamo sentire la richiesta di confronto.</h2>
+  <p class="lead">L'obiettivo iniziale è raggiungere 10.000 adesioni alla petizione pubblica. Le adesioni online esprimono sostegno all'iniziativa, ma non sono automaticamente firme valide per referendum o procedimenti legislativi ufficiali.</p>
+  <div class="petition-box">
+   <div><h3>Sostieni “Sicilia, scegli il tuo futuro”</h3><p>Leggi la proposta completa sulla piattaforma, valuta il testo e scegli liberamente se aderire.</p><div class="goal">Obiettivo comunicativo: 10.000 adesioni<div class="goalbar" aria-label="Progresso non collegato ai dati della piattaforma"><span></span></div><div class="goal-note">Il contatore non è collegato alla piattaforma e non mostra firme reali.</div></div></div>
+   <a class="btn btn-gold" href="https://www.change.org/start-a-petition" target="_blank" rel="noopener noreferrer">Crea la petizione ↗</a>
+  </div>
+  <p class="small">Prima della pubblicazione, sostituisci il pulsante con il link effettivo della petizione appena creata. Non è stata ancora creata una petizione né raccolta alcuna firma tramite questo modello.</p>
+ </div>
+</section>
+<section id="trasparenza" class="anchor">
+ <div class="wrap">
+  <div class="section-kicker">Trasparenza e legalità</div><h2>Un'iniziativa chiara, anche nei suoi limiti.</h2>
+  <div class="notice">
+   <p><strong>Limiti giuridici.</strong> Lo Statuto speciale della Regione Siciliana definisce la Sicilia una Regione autonoma nell'ambito dell'unità politica dello Stato italiano. Una petizione online non può, da sola, indire un referendum sull'indipendenza o produrre la separazione. Le procedure regionali di iniziativa legislativa popolare hanno requisiti formali specifici; la raccolta online su una piattaforma privata non va considerata equivalente alle firme richieste dalla procedura ufficiale.</p>
+   <p><strong>Protezione dei dati.</strong> Questo modello non contiene un modulo di firma e non memorizza dati personali. La firma avviene sulla piattaforma esterna, soggetta alla propria informativa privacy. Non chiedere o pubblicare documenti d'identità, codici fiscali, indirizzi o firme autografe in commenti o post pubblici.</p>
+   <p><strong>Trasparenza del comitato.</strong> Prima di diffondere la campagna, indica chi la promuove, un contatto pubblico dedicato, le modalità di gestione delle eventuali spese e una pagina con aggiornamenti verificabili.</p>
+  </div>
+  <h3 style="color:var(--navy);margin-top:28px">Contatti della campagna</h3>
+  <p class="lead">Inserisci qui un indirizzo email dedicato e il nome del referente solo quando saranno stati scelti e autorizzati alla pubblicazione.</p>
+  <p class="small">Email: [inserire un contatto pubblico] · Promotore: [inserire nome del comitato o referente]</p>
+ </div>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <div class="brand">SICILIA, SCEGLI IL TUO FUTURO<small>Un confronto civile sul futuro della Sicilia</small></div>
+  <p>Iniziativa civica indipendente. Nessuna affiliazione istituzionale è implicita. Le informazioni presenti sono introduttive e non costituiscono consulenza legale. Verificare le procedure ufficiali prima di presentare atti alle istituzioni.</p>
+  <div class="footlinks"><a href="https://www.ars.sicilia.it/" target="_blank" rel="noopener noreferrer">Assemblea Regionale Siciliana</a><a href="https://regione.sicilia.it/istituzioni/regione/lo-statuto-regionale" target="_blank" rel="noopener noreferrer">Statuto regionale</a><a href="https://www.garanteprivacy.it/" target="_blank" rel="noopener noreferrer">Garante Privacy</a></div>
+  <p class="small">© Campagna da completare prima della pubblicazione. Nessun contatore o sistema di raccolta firme è attivo in questo file.</p>
+ </div>
+</footer>
+</body>
+</html>
